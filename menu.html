@@ -9,37 +9,39 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet" />
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header class="d-flex top-header w-100 position-absolute left-0">
+    <header
+      class="d-flex top-header w-100 border-bottom border-dark"
+      style="background-color: white">
       <div class="d-flex justify-content-between py-3 w-100 header-container">
-        <h1>Savoria</h1>
+        <h1 style="color: black">Savoria</h1>
         <ul
           class="d-flex list-unstyled gap-4 m-0 justify-content-center align-items-center navbar">
           <li>
-            <a href="index.html" style="color: white; text-decoration: none"
+            <a href="index.html" style="color: #4b5563; text-decoration: none"
               >Home</a
             >
           </li>
           <li>
-            <a href="menu.html" style="color: white; text-decoration: none"
+            <a href="menu.html" style="color: #4b5563; text-decoration: none"
               >Menu</a
             >
           </li>
           <li>
-            <a href="about.html" style="color: white; text-decoration: none"
+            <a href="about.html" style="color: #4b5563; text-decoration: none"
               >About</a
             >
           </li>
           <li>
-            <a href="contact.html" style="color: white; text-decoration: none"
+            <a href="contact.html" style="color: #4b5563; text-decoration: none"
               >Contact</a
             >
           </li>
@@ -50,116 +52,87 @@
         </div>
       </div>
     </header>
-    <section class="w-100 position-relative z-index">
-      <img src="images/home/Home.png" alt="Home-img" class="w-100 img-mask" />
-      <div class="overlay"></div>
+    <section>
+      <div class="d-flex btn-container">
+        <button class="btn-menu me-2 px-3 py-2" onclick="changeColor(this)">
+          All Items
+        </button>
+        <button class="btn-menu me-2 px-3 py-2" onclick="changeColor(this)">
+          Starters
+        </button>
+        <button class="btn-menu me-2 px-3 py-2" onclick="changeColor(this)">
+          Main Course
+        </button>
+        <button class="btn-menu me-2 px-3 py-2" onclick="changeColor(this)">
+          Desserts
+        </button>
+        <button class="btn-menu px-3 py-2" onclick="changeColor(this)">
+          Beverages
+        </button>
+      </div>
     </section>
-    <section class="d-flex flex-row w-100 features-restaurant">
-      <div class="d-flex flex-row w-100 justify-content-between features gap-4">
-        <div
-          class="d-flex flex-column justify-content-center align-items-center">
-          <svg
-            width="33"
-            height="36"
-            viewBox="0 0 33 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M29.8281 0C28.7031 0 20.8281 2.25 20.8281 12.375V20.25C20.8281 22.732 22.8461 24.75 25.3281 24.75H27.5781V33.75C27.5781 34.9945 28.5836 36 29.8281 36C31.0727 36 32.0781 34.9945 32.0781 33.75V24.75V16.875V2.25C32.0781 1.00547 31.0727 0 29.8281 0ZM5.07812 1.125C5.07812 0.548438 4.64922 0.0703125 4.07266 0.00703125C3.49609 -0.05625 2.98281 0.323437 2.85625 0.878906L0.725781 10.4625C0.627344 10.9055 0.578125 11.3555 0.578125 11.8055C0.578125 15.0328 3.04609 17.6836 6.20312 17.9719V33.75C6.20312 34.9945 7.20859 36 8.45312 36C9.69766 36 10.7031 34.9945 10.7031 33.75V17.9719C13.8602 17.6836 16.3281 15.0328 16.3281 11.8055C16.3281 11.3555 16.2789 10.9055 16.1805 10.4625L14.05 0.878906C13.9234 0.316406 13.3961 -0.05625 12.8266 0.00703125C12.257 0.0703125 11.8281 0.548438 11.8281 1.125V10.5609C11.8281 10.9406 11.5188 11.25 11.1391 11.25C10.7805 11.25 10.4852 10.9758 10.45 10.6172L9.57109 1.02656C9.52188 0.442969 9.03672 0 8.45312 0C7.86953 0 7.38438 0.442969 7.33516 1.02656L6.46328 10.6172C6.42812 10.9758 6.13281 11.25 5.77422 11.25C5.39453 11.25 5.08516 10.9406 5.08516 10.5609V1.125H5.07812ZM8.47422 11.8125H8.45312H8.43203L8.45312 11.7633L8.47422 11.8125Z"
-              fill="#EA580C" />
-          </svg>
-          <h3>Fine Dining</h3>
-          <p class="text-center">
-            Experience culinary excellence with our masterfully crafted dishes.
-          </p>
+    <section style="background-color: #faf9f7">
+      <div class="w-100 container-menu">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="pasta.jpg"
+                class="card-img-top"
+                alt="Classic Pasta Pomodoro" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Classic Pasta Pomodoro
+                  <span class="text-primary">$16.99</span>
+                </h5>
+                <p class="card-text">
+                  Fresh pasta with cherry tomatoes, basil, and extra virgin
+                  olive oil.
+                </p>
+                <p>⭐ 4.8 (120)</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="salmon.jpg" class="card-img-top" alt="Grilled Salmon" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Grilled Salmon <span class="text-primary">$24.99</span>
+                </h5>
+                <p class="card-text">
+                  Fresh Atlantic salmon with seasonal vegetables and lemon
+                  butter sauce.
+                </p>
+                <p>⭐ 4.9 (85)</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="lava_cake.jpg"
+                class="card-img-top"
+                alt="Chocolate Lava Cake" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Chocolate Lava Cake <span class="text-primary">$8.99</span>
+                </h5>
+                <p class="card-text">
+                  Warm chocolate cake with molten center, served with vanilla
+                  ice cream.
+                </p>
+                <p>⭐ 4.7 (156)</p>
+                <a href="#" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div
-          class="d-flex flex-column justify-content-center align-items-center">
-          <svg
-            width="21"
-            height="36"
-            viewBox="0 0 21 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M1.99138 2.06016C2.08982 0.9 3.06716 0 4.23435 0H17.7343C18.9015 0 19.8789 0.9 19.9773 2.06016L20.9617 13.9008C21.3836 18.9633 17.9734 23.407 13.2343 24.4898V31.5H16.6093C17.8539 31.5 18.8593 32.5055 18.8593 33.75C18.8593 34.9945 17.8539 36 16.6093 36H10.9843H5.35935C4.11482 36 3.10935 34.9945 3.10935 33.75C3.10935 32.5055 4.11482 31.5 5.35935 31.5H8.73435V24.4969C3.99529 23.4141 0.585129 18.9703 1.007 13.9078L1.99138 2.06719V2.06016ZM5.92888 9H16.0398L15.6672 4.5H6.30154L5.92888 9Z"
-              fill="#EA580C" />
-          </svg>
+      </div>
+    </section>
 
-          <h3>Premium Drinks</h3>
-          <p class="text-center">
-            Extensive selection of fine wines and craft cocktails.
-          </p>
-        </div>
-        <div
-          class="d-flex flex-column justify-content-center align-items-center">
-          <svg
-            width="38"
-            height="36"
-            viewBox="0 0 38 36"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M20.6883 1.26562C20.3157 0.492188 19.5282 0 18.6633 0C17.7985 0 17.018 0.492188 16.6383 1.26562L12.1172 10.568L2.02035 12.0586C1.1766 12.1852 0.473476 12.7758 0.213319 13.5844C-0.0468368 14.393 0.1641 15.2859 0.768788 15.8836L8.09535 23.1328L6.36566 33.3773C6.22504 34.2211 6.5766 35.0789 7.27269 35.5781C7.96879 36.0773 8.88988 36.1406 9.64926 35.7398L18.6704 30.9234L27.6914 35.7398C28.4508 36.1406 29.3719 36.0844 30.068 35.5781C30.7641 35.0719 31.1157 34.2211 30.975 33.3773L29.2383 23.1328L36.5649 15.8836C37.1696 15.2859 37.3875 14.393 37.1203 13.5844C36.8532 12.7758 36.1571 12.1852 35.3133 12.0586L25.2094 10.568L20.6883 1.26562Z"
-              fill="#EA580C" />
-          </svg>
-          <h3>5-Star Service</h3>
-          <p class="text-center">
-            Impeccable service that exceeds your expectations.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="d-flex w-100">
-      <div class="d-flex flex-column w-100 menu-restaurant gap-5">
-        <div
-          class="w-100 d-flex flex-column justify-content-center align-items-center gap-3">
-          <h1>Our Signature Dishes</h1>
-          <p>Discover our chef's carefully curated selection</p>
-        </div>
-        <div class="d-flex flex-row justify-content-between gap-4">
-          <div class="card" style="width: 24.666rem">
-            <img
-              src="images/food/pexels-crysnet-11653557.jpg "
-              class="card-img-top shadow"
-              alt="Grilled Sea Bass Image" />
-            <div class="card-body">
-              <h5 class="card-title">Grilled Sea Bass</h5>
-              <p class="card-text">
-                Fresh Mediterranean sea bass with herbs and lemon butter sauce
-              </p>
-              <span>$42</span>
-            </div>
-          </div>
-          <div class="card" style="width: 24.666rem">
-            <img
-              src="images/food/Steak.png"
-              class="card-img-top shadow"
-              alt="Prime Ribeye Steak Image" />
-            <div class="card-body">
-              <h5 class="card-title">Prime Ribeye Steak</h5>
-              <p class="card-text">
-                28-day aged beef with roasted vegetables and red wine jus
-              </p>
-              <span>$56</span>
-            </div>
-          </div>
-          <div class="card" style="width: 24.666rem">
-            <img
-              src="images/food/chocolate.png"
-              class="card-img-top shadow"
-              alt="Chocolate Symphony Image" />
-            <div class="card-body">
-              <h5 class="card-title">Chocolate Symphony</h5>
-              <p class="card-text">
-                Dark chocolate mousse with berry compote and gold leaf
-              </p>
-              <span>$18</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section
       class="d-flex w-100 contactFooter-container justify-content-center align-items-center">
       <div
@@ -333,20 +306,12 @@
           }
         });
       });
+      function changeColor(button) {
+        document.querySelectorAll(".btn-menu").forEach((btn) => {
+          btn.classList.remove("btn-menu-active");
+        });
+        button.classList.add("btn-menu-active");
+      }
     </script>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-      crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>
